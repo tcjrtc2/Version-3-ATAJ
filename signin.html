@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Client Sign In — ATAJ Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/signin.css">
+</head>
+<body>
+  <div id="cursor-glow" aria-hidden="true"></div>
+  <div class="background-layers" aria-hidden="true">
+    <div class="layer layer--grid" data-parallax-layer="0.1"></div>
+    <div class="layer layer--vault" data-parallax-layer="0.2"></div>
+    <div class="layer layer--currency" data-parallax-layer="0.3"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <img src="IMG_0878.JPG" alt="ATAJ Services Logo" class="brand__logo">
+        <div class="brand__text">
+          <span class="brand__mark">ATAJ</span>
+          <span class="brand__tagline">Veteran-Owned Financial Precision</span>
+        </div>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#trust">Reviews</a>
+        <a href="index.html#faq">FAQ Vault</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="signin-main">
+    <div class="signin-container">
+      <div class="signin-card">
+        <div class="signin-header">
+          <h1>Client Sign In</h1>
+          <p>Access your encrypted ATAJ vault to review filings, upload documents, and message your advisor.</p>
+        </div>
+
+        <form class="signin-form" action="#" method="post">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              placeholder="you@securemail.com" 
+              required
+              autocomplete="email"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input 
+              type="password" 
+              id="password" 
+              name="password" 
+              placeholder="Enter password" 
+              required
+              autocomplete="current-password"
+            >
+          </div>
+
+          <div class="form-options">
+            <label class="checkbox-label">
+              <input type="checkbox" name="remember" id="remember">
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="forgot-link">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full">Sign In Securely</button>
+
+          <div class="signin-footer">
+            <p>Not a client yet? <a href="index.html#contact" class="signup-link">Schedule a consultation</a>.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

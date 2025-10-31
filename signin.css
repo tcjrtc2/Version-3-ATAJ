@@ -1,0 +1,204 @@
+/* Sign In Page Specific Styles */
+
+.signin-main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1.5rem 3rem;
+}
+
+.signin-container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.signin-card {
+  border-radius: var(--vault-radius);
+  padding: 3rem 2.5rem;
+  border: 1px solid rgba(191, 198, 194, 0.2);
+  background: linear-gradient(135deg, rgba(10, 15, 13, 0.95), rgba(1, 46, 33, 0.75));
+  box-shadow: var(--shadow-elevated), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+}
+
+.signin-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--emerald), var(--metallic-gold), var(--emerald), transparent);
+  opacity: 0.7;
+}
+
+.signin-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(0, 255, 133, 0.08), transparent 50%);
+  pointer-events: none;
+}
+
+.signin-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.signin-header h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  margin: 0 0 1rem;
+  background: linear-gradient(135deg, var(--emerald), var(--metallic-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 12px rgba(0, 255, 133, 0.4));
+}
+
+.signin-header p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.signin-form {
+  position: relative;
+  z-index: 1;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.95rem 1.25rem;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-primary);
+  background: rgba(10, 15, 13, 0.6);
+  border: 1px solid rgba(191, 198, 194, 0.2);
+  border-radius: var(--input-radius);
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.form-group input::placeholder {
+  color: rgba(230, 255, 243, 0.4);
+}
+
+.form-group input:focus {
+  border-color: var(--emerald);
+  background: rgba(10, 15, 13, 0.8);
+  box-shadow: 0 0 0 3px rgba(0, 255, 133, 0.15), inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  user-select: none;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--emerald);
+}
+
+.checkbox-label:hover {
+  color: var(--text-primary);
+}
+
+.forgot-link {
+  color: var(--emerald);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.forgot-link:hover {
+  color: var(--metallic-gold);
+  text-shadow: 0 0 8px rgba(0, 255, 133, 0.4);
+}
+
+.btn--full {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  font-size: 1.05rem;
+}
+
+.signin-footer {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(191, 198, 194, 0.15);
+}
+
+.signin-footer p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.signup-link {
+  color: var(--emerald);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.signup-link:hover {
+  color: var(--metallic-gold);
+  text-shadow: 0 0 8px rgba(0, 255, 133, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .signin-main {
+    padding: 5rem 1rem 2rem;
+  }
+
+  .signin-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .signin-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
